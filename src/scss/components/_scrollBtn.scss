@@ -1,0 +1,37 @@
+.scroll-top-btn {
+  display: none;
+  width: $scroll-btn-w;
+  height: $scroll-btn-h;
+  background: $scroll-btn-background;
+  color: $scroll-btn-color;
+  position: fixed;
+  bottom: $scroll-btn-bottom;
+  right: $scroll-btn-right;
+  border: $scroll-btn-border;
+  z-index: $scroll-btn-z-index;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::before {
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    line-height: $scroll-btn-before-line-height;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:hover {
+    color: $scroll-btn-hover-color;
+  }
+}
+
+.js .scroll-top-btn {
+  display: block;
+}

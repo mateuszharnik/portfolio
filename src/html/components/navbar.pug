@@ -1,0 +1,19 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-white(data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000")
+  h2.d-none Nawigacja
+  
+  a.navbar-brand(href="https://mateuszharnik.now.sh" title="Strona główna")
+    img.logo(src="img/logo.svg" alt="Logo strony - litery mh")
+
+  button.hamburger-btn(type="button" title="Zamknij menu" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Otwórz/Zamknij nawigację")
+    span.d-none Menu
+    span.hamburger-btn__icon
+
+  .navigation.navbar-collapse#navbarSupportedContent
+    ul.navbar-nav.ml-lg-auto.text-center
+      -links = ["#o-mnie", "#umiejetnosci", "#portfolio", "#kontakt"];
+      -titles = ["Informacje o mnie", "Moje umiejętności", "Moje portfolio", "Skontaktuj się"];
+      -texts = ["O mnie", "Umiejętności", "Portfolio", "Kontakt"];
+      
+      -for(i = 0; i < links.length; i++) {
+        li.nav-item: a.nav-link(href=links[i] title=titles[i])= texts[i]  
+      -}

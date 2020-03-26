@@ -1,0 +1,11 @@
+.illustration {
+  width: $illustration-w;
+  max-width: $illustration-max-w;
+  display: block;
+
+  &--welcome {
+    @include media-breakpoint-up(lg) {
+      max-width: $lg-illustration-welcome-max-w;
+    }
+  }
+}

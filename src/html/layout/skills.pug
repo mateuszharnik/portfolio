@@ -1,0 +1,23 @@
+article.pt-5.pt-lg-6
+  .container
+    .row
+      .col-12.col-lg-6.offset-lg-1.order-lg-1(data-aos="fade-left" data-aos-duration="1000" data-aos-offset="90")
+        header.mb-3
+          h3#umiejetnosci.font-weight-bold Umiejętności
+
+        p
+          | Programowania uczę się od trzech lat. Interesuje mnie front-end oraz back-end. Obecnie uczę się testów jednostkowych i back-endu w Node. Technologie które już poznałem:
+    
+        ul.fa-ul.ml-4.mb-5.mb-lg-0.d-flex.flex-wrap
+          -skills = ['HTML', 'Pug', 'CSS', 'SCSS', 'LESS', 'Bootstrap', 'JavaScript', 'jQuery', 'React', 'Redux', 'Vue', 'Vuex', 'Angular', 'TypeScript', 'Node', 'Express', 'MongoDB', 'Gulp', 'Webpack', 'Git', 'Figma'];
+          
+          -for (i = 0; i < skills.length; i++) {
+            li.col-auto.mr-4.pl-0.col-sm-3.mr-sm-0.col-md-2.col-lg-4
+              span.fa-li.text-primary
+                i.far.fa-star(aria-hidden="true")
+              = skills[i]
+          -}
+
+      .col-12.col-lg-5.order-lg-0.justify-content-lg-around.align-items-lg-center.d-lg-flex(data-aos="fade-right" data-aos-duration="1000" data-aos-offset="90")
+        <!-- Title: Percentages, Author: Katerina Limpitsouni, Source: https://undraw.co/, License: https://undraw.co/license -->
+        img.illustration.mx-auto(src="img/undraw_percentages_0rur.svg" alt="Pomiar umiejętności wyrażony w procentach")

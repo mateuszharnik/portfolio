@@ -1,0 +1,22 @@
+ul.social-media.mb-3
+  -links = ['mailto:harnik.mateusz@o2.pl', 'https://github.com/mateuszharnik', 'https://www.facebook.com/mateusz.harnik.1', 'https://pl.linkedin.com/in/mateusz-harnik-85666417b'];
+  -titles = ['Napisz wiadomość', 'Przejdź na stronę Github', 'Przejdź na stronę Facebook', 'Przejdź na stronę Linkedin'];
+  -helps = ['harnik.mateusz@o2.pl', 'https://github.com/mateuszharnik', 'https://www.facebook.com/mateusz.harnik.1', 'https://pl.linkedin.com/in/mateusz-harnik-85666417b'];
+  -labels = ['Adres e-mail: ', 'Konto Github: ', 'Konto Facebook: ', 'Konto Linkedin: '];
+  -icons = ['far fa-envelope', 'fab fa-github', 'fab fa-facebook-square', 'fab fa-linkedin'];
+
+  -for(i = 0; i < titles.length; i++) {
+    -if(links[i] === 'mailto:harnik.mateusz@o2.pl') {
+      li.social-media__item(itemscope itemtype="https://schema.org/Person")
+        span.d-none= labels[i]
+        a.social-media__link(href=links[i] title=titles[i] itemprop="email")
+          span.d-none= helps[i]
+          i(class=icons[i] aria-hidden="true")
+    -} else {
+      li.social-media__item
+        span.d-none= labels[i]
+        a.social-media__link(href=links[i] title=titles[i])
+          span.d-none= helps[i]
+          i(class=icons[i] aria-hidden="true")
+    -}
+  -}

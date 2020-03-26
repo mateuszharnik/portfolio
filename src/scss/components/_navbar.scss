@@ -1,0 +1,96 @@
+.logo {
+  width: $logo-w;
+  height: $logo-h;
+}
+
+.navbar-brand {
+  height: $navbar-brand-h;
+}
+
+.hamburger-btn {
+  height: $hamburger-h;
+  width: $hamburger-w;
+  background: $hamburger-background;
+  border: $hamburger-border;
+  position: relative;
+  padding: $hamburger-p;
+  display: block;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  &__icon {
+    width: $hamburger-icon-w;
+    height: $hamburger-icon-h;
+    display: block;
+    position: relative;
+    border-radius: $hamburger-icon-border-radius;
+    background: $hamburger-icon-background;
+    transition: $hamburger-icon-transition;
+
+    &::before,
+    &::after {
+      content: "";
+      width: $size-100;
+      height: $size-100;
+      display: block;
+      position: absolute;
+      top: $top-0;
+      left: $left-0;
+      background: $gray-900;
+      border-radius: $hamburger-icon-border-radius;
+      transition: $transition-primary;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.js {
+  .navigation {
+    display: none;
+  }
+
+  .hamburger-btn__icon {
+    background: $gray-900;
+
+    &::before,
+    &::after {
+      transform: rotate(0deg);
+    }
+
+    &::before {
+      top: $hamburger-icon-before-top;
+    }
+
+    &::after {
+      top: $hamburger-icon-after-top;
+    }
+  }
+
+  .navbar--open {
+    .hamburger-btn__icon {
+      background: $color-transparent;
+
+      &::before,
+      &::after {
+        top: $top-0;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

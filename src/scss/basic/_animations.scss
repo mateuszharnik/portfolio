@@ -1,0 +1,29 @@
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-5.5px);
+  }
+  50% {
+    transform: translateY(5.5px);
+  }
+  100% {
+    transform: translateY(-5.5px);
+  }
+}

@@ -1,0 +1,18 @@
+.page-404 {
+  .h2 {
+    @include media-breakpoint-up(lg) {
+      @include font-size($h1-font-size);
+    }
+  }
+
+  .illustration {
+    @include media-breakpoint-up(lg) {
+      max-width: $not-found-illustration-max-w;
+    }
+  }
+
+  .logo {
+    height: $not-found-logo-h;
+    width: auto;
+  }
+}

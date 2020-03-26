@@ -1,0 +1,47 @@
+doctype html
+html(lang="pl" dir="ltr")
+  head
+    include components/metadata.pug
+
+    title Mateusz Harnik
+
+    include components/links.pug
+    include components/icons.pug
+  body
+    h1.d-none Mateusz Harnik - Strona internetowa
+
+    noscript
+      .alert.alert-danger.mb-0(role="alert")
+        h4.alert-heading Uwaga!
+        hr
+        p.mb-0 Twoja przeglądarka musi wspierać JavaScript aby ta strona działała poprawnie.
+
+    script.
+      document.querySelector('body').className += document.querySelector('body').className === '' ? 'js' : ' js';
+
+    a.skip-link(href="#tresc" data-tooltip="Pomiń nawigację") Przejdź do głównej treści
+
+    include layout/header.pug
+
+    main#tresc.overflow-hidden
+      include layout/welcome.pug
+      
+      section.section-info
+        h2.d-none Informacje
+        
+        include layout/about.pug
+        include layout/skills.pug
+        include layout/portfolio.pug
+        include layout/contact.pug
+      
+    include layout/footer.pug
+
+    include components/scrollBtn.pug
+
+    <!-- build:libs -->
+    script(type="text/javascript" src="bundle/libs.js")
+    <!-- endbuild -->
+
+    <!-- build:main -->
+    script(type="text/javascript" src="bundle/main.js")
+    <!-- endbuild -->

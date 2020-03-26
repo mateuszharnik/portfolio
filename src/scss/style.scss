@@ -1,0 +1,14 @@
+@import "./vendors/bootstrap/custom";
+@import "./vendors/aos/aos";
+
+@import "./basic/variables";
+@import "./basic/basic";
+@import "./basic/animations";
+
+@import "./layout/header";
+@import "./layout/illustrations";
+@import "./layout/welcome";
+@import "./layout/contact";
+@import "./layout/page-404";
+
+@import "./components/scrollBtn";

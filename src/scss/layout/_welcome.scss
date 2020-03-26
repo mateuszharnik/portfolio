@@ -1,0 +1,87 @@
+.article-welcome {
+  width: $welcome-article-w;
+  background: $welcome-article-background;
+  background-image: $welcome-article-gradient;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: $welcome-article-before-w;
+    height: $welcome-article-before-h;
+    display: block;
+    position: absolute;
+    bottom: $welcome-article-before-bottom;
+    left: $welcome-article-before-left;
+    background-image: url(../img/wave.svg);
+    background-position: center;
+    background-size: $welcome-article-before-bg-size;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(md) {
+      height: $md-welcome-article-before-h;
+      bottom: $md-welcome-article-before-bottom;
+      background-size: $md-welcome-article-before-bg-size;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: $xl-welcome-article-before-h;
+      bottom: $xl-welcome-article-before-bottom;
+      background-size: $xl-welcome-article-before-bg-size;
+    }
+  }
+}
+
+.welcome-title {
+  color: $welcome-title-color;
+  text-shadow: $welcome-title-shadow;
+
+  @include media-breakpoint-up(sm) {
+    @include font-size($h1-font-size);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include font-size($display4-size);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($display3-size);
+  }
+}
+
+.arrow-btn {
+  width: $arrow-down-w;
+  height: $arrow-down-h;
+  background: $arrow-down-background;
+  display: block;
+  text-align: center;
+  margin: $arrow-down-m;
+  color: $arrow-down-color;
+  border: $arrow-down-border;
+
+  &::before {
+    content: "\f103";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    line-height: $arrow-down-before-line-height;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    animation: bounce 1s ease-in-out infinite forwards;
+  }
+
+  &:hover {
+    transition: none;
+    color: $arrow-down-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: $arrow-down-focus-outline;
+  }
+}
+
+.js .article-welcome {
+  margin-top: $welcome-article-before-h - 2px;
+}

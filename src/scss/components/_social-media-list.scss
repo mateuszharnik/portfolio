@@ -1,0 +1,30 @@
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: $social-media-p;
+  font-size: $social-media-font-size;
+  line-height: $social-media-line-height;
+
+  &__item {
+    height: $social-media-item-h;
+    width: $social-media-item-w;
+    margin: $social-media-item-m;
+
+    &:last-of-type {
+      margin: $social-media-item-last-m;
+    }
+  }
+
+  &__link {
+    color: $social-media-link-color;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      color: $social-media-link-hover-color;
+      animation: shake 0.3s ease-in-out forwards;
+    }
+  }
+}

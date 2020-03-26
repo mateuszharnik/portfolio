@@ -1,0 +1,48 @@
+.article-contact {
+  width: $contact-article-w;
+  position: relative;
+  margin: $contact-article-m;
+
+  @include media-breakpoint-up(md) {
+    margin: $md-contact-article-m;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: $xl-contact-article-m;
+  }
+
+  &::before {
+    content: "";
+    width: $contact-article-before-w;
+    height: $contact-article-before-h;
+    display: block;
+    position: absolute;
+    top: $contact-article-before-top;
+    left: $contact-article-before-left;
+    background-image: url(../img/wave-dark.svg);
+    background-position: center;
+    background-size: $contact-article-before-bg-size;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(md) {
+      height: $md-contact-article-before-h;
+      top: $md-contact-article-before-top;
+      background-size: $md-contact-article-before-bg-size;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: $xl-contact-article-before-h;
+      top: $xl-contact-article-before-top;
+      background-size: $xl-contact-article-before-bg-size;
+    }
+  }
+}
+
+.contact-title {
+  height: $contact-title-h;
+  margin: $contact-title-m;
+  overflow: hidden;
+}
+
+@import "../components/form";
+@import "../components/social-media-list";

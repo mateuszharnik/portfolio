@@ -1,0 +1,28 @@
+doctype html
+html(lang="pl" dir="ltr")
+  head
+    include components/metadata.pug
+
+    title Mateusz Harnik
+
+    include components/links.pug
+    include components/icons.pug
+  body.page-404
+    h1.d-none Mateusz Harnik - Strona internetowa
+    
+    .container
+      .row
+        .col-12.mt-5.text-center
+          img.logo(src="img/logo.svg", alt="Logo strony - litery mh")
+          
+        .col-12.mt-5.text-center
+          h2.h2.mb-0.font-weight-bold Strona nie istnieje!
+
+          p.h2.font-weight-bold
+            | Lepiej szybko stąd 
+            a(href="https://mateuszharnik.now.sh" title="Przejdź do strony głównej") uciekaj
+            | .
+      
+        .col-12.mt-5
+          <!-- Title: Page not found, Author: Katerina Limpitsouni, Source: https://undraw.co/, License: https://undraw.co/license -->
+          img.illustration.mx-auto(src="img/undraw_page_not_found_su7k.svg", alt="Liczba 404 na której siedzi dziewczyna")

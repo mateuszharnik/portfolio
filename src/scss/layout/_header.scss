@@ -1,0 +1,20 @@
+.page-header {
+  width: $header-w;
+
+  &__container {
+    max-width: $header-container-max-w;
+
+    @include media-breakpoint-up(lg) {
+      max-width: $lg-header-container-max-w;
+    }
+  }
+}
+
+.js .page-header {
+  position: absolute;
+  top: $top-0;
+  left: $left-0;
+  z-index: $zindex-dropdown;
+}
+
+@import "../components/navbar";
