@@ -1,22 +1,21 @@
 ul.social-media.mb-3
-  -links = ['mailto:harnik.mateusz@o2.pl', 'https://github.com/mateuszharnik', 'https://www.facebook.com/mateusz.harnik.1', 'https://pl.linkedin.com/in/mateusz-harnik-85666417b'];
-  -titles = ['Napisz wiadomość', 'Przejdź na stronę Github', 'Przejdź na stronę Facebook', 'Przejdź na stronę Linkedin'];
-  -helps = ['harnik.mateusz@o2.pl', 'https://github.com/mateuszharnik', 'https://www.facebook.com/mateusz.harnik.1', 'https://pl.linkedin.com/in/mateusz-harnik-85666417b'];
-  -labels = ['Adres e-mail: ', 'Konto Github: ', 'Konto Facebook: ', 'Konto Linkedin: '];
-  -icons = ['far fa-envelope', 'fab fa-github', 'fab fa-facebook-square', 'fab fa-linkedin'];
-
-  -for(i = 0; i < titles.length; i++) {
-    -if(links[i] === 'mailto:harnik.mateusz@o2.pl') {
-      li.social-media__item(itemscope itemtype="https://schema.org/Person")
-        span.d-none= labels[i]
-        a.social-media__link(href=links[i] title=titles[i] itemprop="email")
-          span.d-none= helps[i]
-          i(class=icons[i] aria-hidden="true")
-    -} else {
-      li.social-media__item
-        span.d-none= labels[i]
-        a.social-media__link(href=links[i] title=titles[i])
-          span.d-none= helps[i]
-          i(class=icons[i] aria-hidden="true")
-    -}
-  -}
+  li.social-media__item
+    span.d-none Adres e-mail: 
+    a.social-media__link(href!="mailto:&#x68;&#x61;&#x72;&#x6e;&#x69;&#x6b;&#x2e;&#x6d;&#x61;&#x74;&#x65;&#x75;&#x73;&#x7a;&#x40;&#x6f;&#x32;&#x2e;&#x70;&#x6c;" title="Napisz wiadomość")
+      span.d-none &#x68;&#x61;&#x72;&#x6e;&#x69;&#x6b;&#x2e;&#x6d;&#x61;&#x74;&#x65;&#x75;&#x73;&#x7a;&#x40;&#x6f;&#x32;&#x2e;&#x70;&#x6c;
+      i.far.fa-envelope(aria-hidden="true")
+  li.social-media__item
+    span.d-none Konto Github: 
+    a.social-media__link(href="https://github.com/mateuszharnik" title="Przejdź na stronę Github")
+      span.d-none https://github.com/mateuszharnik
+      i.fab.fa-github(aria-hidden="true")
+  li.social-media__item
+    span.d-none Konto Facebook: 
+    a.social-media__link(href="https://www.facebook.com/mateusz.harnik.1" title="Przejdź na stronę Facebook")
+      span.d-none https://www.facebook.com/mateusz.harnik.1
+      i.fab.fa-facebook-square(aria-hidden="true")
+  li.social-media__item
+    span.d-none Konto Linkedin: 
+    a.social-media__link(href="https://pl.linkedin.com/in/mateusz-harnik-85666417b" title="Przejdź na stronę Linkedin")
+      span.d-none https://pl.linkedin.com/in/mateusz-harnik-85666417b
+      i.fab.fa-linkedin(aria-hidden="true")
